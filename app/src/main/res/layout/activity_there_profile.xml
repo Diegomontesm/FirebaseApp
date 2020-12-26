@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1EDED"
+    tools:context=".ThereProfileActivity">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- COVER PHOTO -->
+            <ImageView
+                android:id="@+id/coverId"
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:scaleType="fitXY"
+                android:layout_height="180dp">
+
+            </ImageView>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:orientation="horizontal"
+                android:background="#77000000">
+
+                <ImageView
+                    android:id="@+id/avatarIv"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_default_img_white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/NameTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="25sp"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        />
+                    <TextView
+                        android:id="@+id/EmailTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#FFFFFF"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        />
+                    <TextView
+                        android:id="@+id/PhoneTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#FFFFFF"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- RECYCLERVIEW: Posts específicos del usuario -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_post"
+                android:layout_below="@id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+
+        </RelativeLayout>
+</ScrollView>
+
+

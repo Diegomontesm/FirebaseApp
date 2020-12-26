@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- [2] Cambiamos a RELATIVE LAYOUT-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+    
+    <!-- Ponemos la imagen que descargamos -->
+    <ImageView
+        android:contentDescription="Imagen de fondo logotipo Firebase"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/firebase_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+    
+    <!-- Boton de registrar -->
+    <Button
+        android:id="@+id/BTN_Registrar"
+        android:text="Registrar"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/BTN_Login"
+        android:drawableStart="@drawable/user16x16"
+        android:drawableLeft="@drawable/user16x16"
+    />
+
+    <!-- Boton de login -->
+    <Button
+        android:id="@+id/BTN_Login"
+        android:text="Ingresar"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:drawableStart="@drawable/llave16x16"
+        android:drawableLeft="@drawable/llave16x16"
+        />
+
+
+
+</RelativeLayout>

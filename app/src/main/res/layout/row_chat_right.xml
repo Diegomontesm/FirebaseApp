@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/messageLayout"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:c_border_color="@null"
+            android:visibility="gone"
+            android:src="@drawable/ic_default_img_darkblue"
+            android:id="@+id/profileIv"/>
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08/12/2020 04:06PM"
+            android:textColor="#000000"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/messageTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:padding="15dp"
+            android:text="Su mensaje"
+            android:background="@drawable/bg_sender"
+            android:textColor="#000000"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/isSeenTv"
+        android:gravity="end"
+        android:textAlignment="textEnd"
+        android:text="Mensaje enviado"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

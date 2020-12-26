@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1EDED"
+    tools:context=".ChatActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/profileIv"
+            android:src="@drawable/ic_face_white"
+            app:c_background_color="@color/colorPrimaryDark"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+        
+        <LinearLayout
+            android:id="@+id/barraArribaChat"
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Recive nombre -->
+            <TextView
+                android:id="@+id/NameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="Su Nombre"
+                android:textSize="18dp"
+                android:textStyle="bold"    />
+            <!-- Recibe status -->
+            <TextView
+                android:id="@+id/userStatusTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="online"
+                android:textSize="12dp"
+                    />
+
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/chatLayout"
+        android:layout_below="@id/toolbar"   />
+
+    <!-- Enviar mensaje EdiTExt y boton en el layout -->
+    <LinearLayout
+        android:id="@+id/chatLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+        <!-- Input message -->
+        <EditText
+            android:id="@+id/messageEt"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Empieza a escribir"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:layout_height="wrap_content"/>
+        <!--BTN ENVIAR MSJ -->
+        <ImageButton
+            android:id="@+id/sendBTN"
+            android:background="@null"
+            android:src="@drawable/ic_sent_purple"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
